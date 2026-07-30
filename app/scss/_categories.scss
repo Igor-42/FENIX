@@ -1,0 +1,340 @@
+.categories {
+  padding: 12px 0;
+  background: #fff;
+
+  &__container.container {
+    padding: 0;
+  }
+
+  &__inner {
+    padding: 32px 36px 36px;
+    background: #f6f7fa;
+    border-radius: 40px;
+  }
+
+  &__label {
+    position: relative;
+
+    display: inline-block;
+    margin-bottom: 16px;
+    padding-left: 16px;
+
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    color: #020b25;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 8px;
+      left: 0;
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+      background: var(--BlueLight, #647a93);
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+
+    color: #020b25;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 660px;
+  border-radius: 24px;
+
+  &__photo {
+    position: absolute;
+     inset: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    object-position: 75% center;
+
+    object-fit: cover;
+  }
+  &--epilation {
+  .category-card__photo {
+  
+
+    object-position: center;
+    transform: translateX(-14%) scale(1.3);
+  }
+}
+&--cosmetology {
+  .category-card__photo {
+     transform: translate(-15%, -15%) scale(1.55) scaleX(-1);
+  }
+}
+
+&--pigments {
+  .category-card__photo {
+   transform: translate(2%, 5%) scale(1.15) scaleX(-1);
+  }
+}
+
+  &__panel {
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    z-index: 2;
+
+    width: 50%;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  &--panel-right {
+    .category-card__panel {
+      right: 12px;
+    }
+  }
+
+  &--panel-left {
+    .category-card__panel {
+      left: 12px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    h3 {
+      margin: 0 0 16px;
+
+      font-family: Montserrat, sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+
+      color: var(--BlueDark, #203247);
+    }
+
+    p {
+      max-width: 560px;
+      margin: 0;
+
+      font-family: Montserrat, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0;
+
+      color: var(--BlueDark, #203247);
+    }
+  }
+
+  &__products {
+    flex: 1;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    // gap: 24px;
+
+    // padding: 24px 48px 16px;
+
+    img {
+      width: 110%;
+      max-width: none;
+      height: auto;
+
+      object-fit: contain;
+      transform: translateY(-40px);
+    }
+
+    &--single {
+      img {
+        width: 70%;
+        max-width: none;
+        height: auto;
+
+        object-fit: contain;
+        transform: translateY(-20px);
+       
+      }
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #eb512e;
+
+    img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+  }
+  
+}
+
+
+
+@media (max-width: 740px) {
+  .categories {
+    padding: 0;
+    background: #f6f7fa;
+
+    &__container.container {
+      padding: 0;
+    }
+
+    &__inner {
+      padding: 40px 20px;
+      background: #f6f7fa;
+      border-radius: 0;
+    }
+
+    &__label {
+      margin-bottom: 20px;
+
+      font-size: 14px;
+      line-height: 20px;
+
+      &::before {
+        top: 6px;
+      }
+    }
+
+    &__title {
+      max-width: 320px;
+      margin-bottom: 16px;
+
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -0.04em;
+    }
+
+    &__list {
+      gap: 16px;
+    }
+  }
+
+  .category-card {
+    min-height: 0;
+    border-radius: 24px;
+    background: #fff;
+
+    &__photo {
+      display: none;
+    }
+
+    &__panel {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto !important;
+      right: auto !important;
+
+      width: 100%;
+      min-height: 410px;
+      padding: 18px 16px 16px;
+
+      background: #fff;
+      border-radius: 24px;
+    }
+
+    &__content {
+      h3 {
+        margin-bottom: 10px;
+
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        max-width: 290px;
+
+        font-size: 17px;
+        line-height: 24px;
+      }
+    }
+
+    &__products {
+      flex: 1;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      padding: 24px 0 36px;
+
+      img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+
+        transform: none;
+        object-fit: contain;
+      }
+
+      &--single {
+        img {
+          width: 72%;
+          max-width: 230px;
+          transform: none;
+        }
+      }
+    }
+
+    &__arrow {
+      right: 16px;
+      bottom: 16px;
+
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

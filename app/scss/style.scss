@@ -1,0 +1,85 @@
+
+@use "header" as *;
+@use "swiper" as *;
+@use "flagship" as *;
+@use "benefits" as *;
+@use "process" as *;
+@use "blog" as *;
+@use "partner" as *;
+@use "faq" as *;
+@use "single-post" as *;
+@use "training" as *;
+@use "interviews" as *;
+@use "categories" as *;
+@use "solutions" as *;
+@use "footer" as *;
+
+html,
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  background: #f8f8f8;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1416px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
