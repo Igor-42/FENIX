@@ -2591,6 +2591,10 @@ body.menu-open {
 .interviews__arrow.is-edge {
   background: transparent;
   pointer-events: none;
+  opacity: 0.45;
+}
+.interviews__slides {
+  width: 100%;
 }
 .interviews__main {
   display: grid;
@@ -2599,6 +2603,9 @@ body.menu-open {
   overflow: hidden;
   border-radius: 32px;
   background: #fff;
+}
+.interviews__main[hidden] {
+  display: none !important;
 }
 .interviews__thumbs {
   margin-top: 12px;
@@ -2743,6 +2750,8 @@ body.menu-open {
   border-radius: 20px;
   background: #fff;
   cursor: pointer;
+  -webkit-transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 .interviews-thumb img {
   width: 64px;
@@ -2845,6 +2854,9 @@ body.menu-open {
     overflow: visible;
     border-radius: 0;
     background: transparent;
+  }
+  .interviews__main[hidden] {
+    display: none !important;
   }
   .interviews__thumbs {
     margin-top: 16px;
@@ -2990,8 +3002,8 @@ body.menu-open {
   .interviews-video {
     min-height: 0;
     margin-top: 16px;
-    border-radius: 16px;
     overflow: hidden;
+    border-radius: 16px;
   }
   .interviews-video img {
     min-height: 0;
@@ -3010,8 +3022,8 @@ body.menu-open {
     height: 56px;
     padding: 0;
     overflow: hidden;
-    border-radius: 12px;
     border: 1px solid transparent;
+    border-radius: 12px;
   }
   .interviews-thumb img {
     width: 100%;
